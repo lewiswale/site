@@ -26,6 +26,14 @@ export default function Home() {
           </a>
           </Link>
         </div>
+
+        <div>
+            <Link href="poodle">
+            <a>
+                <h3>Poodle bot!</h3>
+            </a>
+            </Link>
+        </div>
       </body>
     </div>
   )
