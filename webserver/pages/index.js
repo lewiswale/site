@@ -34,6 +34,13 @@ export default function Home() {
             </a>
             </Link>
         </div>
+        <div>
+            <Link href="poker">
+            <a>
+                <h3>Poker - WIP</h3>
+            </a>
+            </Link>
+        </div>
       </body>
     </div>
   )

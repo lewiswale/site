@@ -64,7 +64,8 @@ class Poker extends Component {
 
                 <body>
                     <div>
-                        <img className={cardsStyle.card} src={`/cards/${this.state.card1img}.png`}/> <img className={cardsStyle.card} src={`/cards/${this.state.card2img}.png`}/>
+                        <img className={cardsStyle.card} src={`/cards/${this.state.card1img}.png`} alt={this.state.card1img}/>
+                        <img className={cardsStyle.card} src={`/cards/${this.state.card2img}.png`} alt={this.state.card2img}/>
                     </div>
                     <div>
                         <button onClick={this.getHand}>
