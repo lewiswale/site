@@ -33,7 +33,7 @@ class Poker extends Component {
     }
 
     async getHand(event) {
-        await fetch('http://localhost:8080/api/player/get-hand', {
+        await fetch('http://lewiswale.com:8080/api/player/get-hand', {
             method: 'get'
         })
         .then((res => res.json()))
