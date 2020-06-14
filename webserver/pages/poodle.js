@@ -20,7 +20,7 @@ class Poodle extends Component {
 
     async handleSubmit(event) {
         event.preventDefault();
-        await fetch('http://localhost:5000/sender?message=' + this.state.message, {
+        await fetch('http://lewiswale.com:5000/sender?message=' + this.state.message, {
             method: 'get'
         })
         .then((res) => res.json())
