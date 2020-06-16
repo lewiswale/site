@@ -6,6 +6,7 @@ import cardsStyle from '../styles/cards.module.css'
 class Poker extends Component {
     constructor(props) {
         super(props);
+        this.url = 'http://localhost:8080/api';
         this.state = {
             playerId: -1,
             playerCount: -1,
@@ -45,7 +46,7 @@ class Poker extends Component {
         var suit2 = responseJson['player']['playerHand'][1]['suit'];
         var img1 = this.getImageName(value1, suit1);
         var img2 = this.getImageName(value2, suit2);
-        
+
         this.setState({
             playerId: id,
             playerCount: count,
@@ -58,7 +59,7 @@ class Poker extends Component {
 
     async getHand(event) {
 
-        await fetch(`http://localhost:8080/api/player/get-hand/` + this.state.playerId, {
+        await fetch(this.url + '/player/get-hand/' + this.state.playerId, {
             method: 'get'
         })
         .then((res => res.json()))
@@ -72,7 +73,7 @@ class Poker extends Component {
     }
 
     async joinGame(event) {
-        await fetch('http://localhost:8080/api/game/join-game', {
+        await fetch(this.url + '/game/join-game', {
             method: 'get'
         })
         .then((res) => res.json())
