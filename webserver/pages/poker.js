@@ -45,7 +45,7 @@ class Poker extends Component {
         var suit2 = responseJson['player']['playerHand'][1]['suit'];
         var img1 = this.getImageName(value1, suit1);
         var img2 = this.getImageName(value2, suit2);
-
+        
         this.setState({
             playerId: id,
             playerCount: count,
@@ -119,6 +119,13 @@ class Poker extends Component {
                             <button onClick={this.getHand}>
                                 Get hand!
                             </button>
+                        </div>
+                        <div>
+                            <h4>
+                                Player ID: {this.state.playerId}
+                                <br />
+                                Player count: {this.state.playerCount}
+                            </h4>
                         </div>
                     </body>
                 </div>
